@@ -1,0 +1,43 @@
+:root {
+    --greyGradient: linear-gradient(to bottom, #F5F5F5 0%, #FAFAFA 50%, #F5F5F5 100%);
+    --blue: #004593;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500");
+
+body {
+    margin: 0;
+    font-family: "Maven Pro";
+    font-size: 1.2em;
+    background: var(--greyGradient);
+}
+
+.headerNav {
+    box-shadow: 0px 2px 4px #B0BEC5;
+    font-size: 2.4rem;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1570FF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    ul {
+        font-size: 1.5rem;
+        list-style: none;
+        float: right;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin: 0 11px;
+            a {
+                color: #1570FF;
+                transition: all 0.4s;
+                text-decoration: none;
+                &:hover {
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+}
