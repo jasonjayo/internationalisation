@@ -18,9 +18,11 @@ main {
     align-self: center;
     color: var(--blue);
     text-align: center;
-    display: flex; }
+    display: flex;
+    align-items: center; }
     #title h1 img {
-      margin-right: 60px; }
+      margin: 0 50px;
+      object-fit: contain; }
 
 div#erasmus-background {
   background: url("../erasmus.jpg");
@@ -49,7 +51,7 @@ nav {
       font-weight: 600;
       letter-spacing: 1.25px; }
       nav ul li a:hover {
-        color: #263238;
+        color: var(--blue);
         text-decoration: underline; }
 
 #desc {

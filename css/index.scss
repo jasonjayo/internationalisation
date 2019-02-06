@@ -20,8 +20,10 @@ main {
         color: var(--blue);
         text-align: center;
         display: flex;
+        align-items: center;
         img {
-            margin-right: 60px;
+            margin: 0 50px;
+            object-fit: contain;
         }
     }       
 }
@@ -55,7 +57,7 @@ nav {
             font-weight: 600;
             letter-spacing: 1.25px;
             a:hover {
-                color: #263238;
+                color: var(--blue);
                 text-decoration: underline;
             }
         }
