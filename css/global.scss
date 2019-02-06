@@ -41,3 +41,40 @@ body {
         }
     }
 }
+
+#top { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-gap: 50px; 
+} 
+
+#info {
+    grid-row: span 2;
+    p {
+        margin: 0 0 50px;
+    }
+}
+
+.infoBox { 
+    display: inline-block; 
+    color: #fff; 
+    text-decoration: none; } 
+    .infoBox > div { 
+        background: linear-gradient(45deg, #EF5350 0%, #D81B60 100%); 
+        padding: 20px; 
+        height: 300px; 
+        display: flex; 
+        align-items: center; 
+        box-sizing: border-box; 
+        flex-wrap: wrap;
+        transition: box-shadow 0.3s;
+        &:hover {
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+        }
+    } 
+
+.infoBox h2 { 
+    margin: 10px 0; 
+    width: 100%;
+}
