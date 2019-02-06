@@ -1,16 +1,15 @@
 main {
-  height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr; }
 
 #title {
+  height: 100vh;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   padding: 15px 0;
-  border-top: solid var(--blue) 10px;
-  border-left: solid var(--blue) 10px;
-  border-bottom: solid var(--blue) 10px; }
+  border: solid var(--blue) 10px; }
   #title h1 {
     font-size: 4rem;
     margin: 0 50px;
@@ -30,7 +29,8 @@ div#erasmus-background {
   background: url("../erasmus.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right; }
+  background-position: right;
+  grid-row: span 2; }
 
 nav {
   text-align: center;
@@ -63,5 +63,13 @@ nav {
   border-bottom: 1px solid #E0E0E0;
   padding: 100px 0;
   background: var(--greyGradient); }
+
+footer {
+  background: var(--blue);
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+  padding: 20px; }
 
 /*# sourceMappingURL=index.css.map */

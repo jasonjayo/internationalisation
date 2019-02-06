@@ -1,0 +1,14 @@
+#top {
+  font-weight: 600;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 25px; }
+  #top img {
+    margin: 25px auto 0 auto;
+    width: 200px;
+    display: block; }
+  #top a {
+    color: #000;
+    text-decoration: none; }
+
+/*# sourceMappingURL=countryselector.css.map */
