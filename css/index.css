@@ -3,33 +3,29 @@ main {
   grid-template-columns: 2fr 1fr; }
 
 #title {
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  padding: 15px 0;
-  border: solid var(--blue) 10px; }
+  border: solid var(--blue) 10px;
+  overflow: hidden; }
   #title h1 {
     font-size: 4rem;
-    margin: 0 50px;
+    margin: 25px 50px;
     padding: 0;
-    align-self: center;
     color: var(--blue);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center; }
+    text-align: center; }
     #title h1 img {
-      margin: 25px 50px;
-      object-fit: contain; }
+      margin: 0 auto 25px auto;
+      object-fit: contain;
+      display: block; }
 
 div#erasmus-background {
-  background: url("../erasmus.jpg");
-  background-size: cover;
+  background: url("../erasmus.jpg") var(--blue);
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   grid-row: span 2; }
 
 nav {
@@ -47,7 +43,7 @@ nav {
       transition: all 0.3s;
       position: relative; }
     nav ul li {
-      margin: 20px 30px;
+      margin: 10px 30px;
       transition: all 0.3s;
       display: inline-block;
       font-weight: 600;
@@ -58,10 +54,10 @@ nav {
 
 #desc {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   border-top: 1px solid #E0E0E0;
   border-bottom: 1px solid #E0E0E0;
-  padding: 100px 0;
+  padding: 5rem 25px;
   background: var(--greyGradient); }
 
 footer {
@@ -71,5 +67,25 @@ footer {
   font-style: italic;
   color: #fff;
   padding: 20px; }
+
+@media only screen and (max-width: 1100px) {
+  :root {
+    font-size: 0.8em; } }
+@media only screen and (max-width: 910px) {
+  main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100fr; } }
+@media only screen and (max-width: 590px) {
+  #title h1 {
+    margin: 25px 5px; } }
+@media only screen and (max-width: 590px) {
+  #title h1 {
+    font-size: 3rem; } }
+@media only screen and (max-width: 390px) {
+  #title h1 {
+    font-size: 2.5rem; }
+
+  #title ul li {
+    display: block; } }
 
 /*# sourceMappingURL=index.css.map */

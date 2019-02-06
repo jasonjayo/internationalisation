@@ -1,6 +1,7 @@
 :root {
     --greyGradient: linear-gradient(to bottom, #F5F5F5 0%, #FAFAFA 50%, #F5F5F5 100%);
     --blue: #004593;
+    font-size: calc(0.9em + 0.1vw);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500");
@@ -8,7 +9,6 @@
 body {
     margin: 0;
     font-family: "Maven Pro";
-    font-size: 1.2em;
     background: var(--greyGradient);
 }
 
