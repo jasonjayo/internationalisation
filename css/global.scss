@@ -1,7 +1,7 @@
 :root {
     --greyGradient: linear-gradient(to bottom, #F5F5F5 0%, #FAFAFA 50%, #F5F5F5 100%);
     --blue: #004593;
-    font-size: calc(0.9em + 0.1vw);
+    font-size: calc(1em + 0.1vw);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500");
@@ -14,15 +14,15 @@ body {
 
 .headerNav {
     box-shadow: 0px 2px 4px #B0BEC5;
-    font-size: 2.4rem;
-    padding: 15px;
+    font-size: 2rem;
+    padding: 15px 25px;
     font-weight: 600;
     margin-bottom: 25px;
     color: #1570FF;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     ul {
-        font-size: 1.5rem;
+        font-size: 0.75em;
         list-style: none;
         float: right;
         margin: 0;
@@ -68,7 +68,7 @@ body {
         align-items: center; 
         box-sizing: border-box; 
         flex-wrap: wrap;
-        transition: box-shadow 0.3s;
+        transition: box-shadow 0.2s;
         &:hover {
             box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
         }
@@ -77,4 +77,50 @@ body {
 .infoBox h2 { 
     margin: 10px 0; 
     width: 100%;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .headerNav {
+        font-size: 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    .headerNav {
+        padding: 10px 25px;
+        ul {
+            display: block;
+            float: none;
+            margin: 7px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #top {
+        grid-template-columns: 1fr 1fr;
+    }
+    #info {
+        grid-row: initial;
+        p {
+           margin: 0; 
+        }
+        p:not(:last-of-type) {
+            margin: 0 0 50px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    #top {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header {
+        font-size: 3rem;
+    }
 }
