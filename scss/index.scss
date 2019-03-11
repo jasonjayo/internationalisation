@@ -1,0 +1,110 @@
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#title {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden;
+    border: 10px solid var(--blue);
+    h1 {
+        font-size: 4rem;
+        margin: 25px 50px;
+        padding: 0;
+        color: var(--blue);
+        text-align: center;
+        img {
+            margin: 0 auto 25px auto;
+            object-fit: contain;
+            display: block;
+        }
+    }       
+}
+
+div#erasmus-background {
+    background: url("../erasmus.jpg") var(--blue);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-row: span 2;
+}
+
+nav {
+    text-align: center;
+    font-weight: 500;
+    ul {
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        max-width: 60%;
+        margin: 0 auto;
+        padding: 0;
+        a {
+            color: var(--light-blue);
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            position: relative;
+        }
+        li {
+            margin: 15px 30px;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 600;
+            letter-spacing: 1.05px;
+            a:hover {
+                color: var(--blue);
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+#desc {
+    text-align: center;
+    font-size: 1.2rem;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 5rem 25px;
+    background: var(--greyGradient);
+}
+
+//RWS
+@media only screen and (max-width: 1100px) {
+    :root {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    main {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 100fr;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    #title h1 {
+        margin: 25px 5px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    #title h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    #title h1 {
+        font-size: 2.5rem;
+    }
+    #title ul li {
+        display: block;
+    }
+}
