@@ -12,7 +12,7 @@ function assets() {
     if (is_front_page()) {
         wp_enqueue_style("index", get_stylesheet_directory_uri() . "/css/index.css");
     }
-    if (is_page("partners")) {
+    if (is_page("partners/")) {
         wp_enqueue_style("partners-country-selector", get_stylesheet_directory_uri() . "/css/partners-country-selector.css");
     }
     
@@ -37,10 +37,29 @@ function baw_hack_wp_title_for_home($title) {
     return $title;
 }
 
-function register_my_menu() {
+function custom_rewrite_tag() {
+    add_rewrite_tag('%country%', '([^&]+)');
+  }
+  add_action("init", "custom_rewrite_tag", 10, 0);
+
+
+//   function custom_rewrite_rule() {
+//     add_rewrite_rule('^partnerscountry/([^/]*)/?','partnerslist/?country=$matches[1]','top');
+//   }
+//   add_action('init', 'custom_rewrite_rule', 10, 0);
+
+
+// function add_query_vars_filter( $vars ) {
+//     $vars[] = "c";
+//     return $vars;
+//   }
+// add_filter("query_vars", "add_query_vars_filter");
+
+function register_my_menus() {
     register_nav_menu("header-menu", __("Header Navigation"));
+    register_nav_menu("partners-country-menu", __("Partners Country Selector"));
 }
-add_action("init", "register_my_menu");
+add_action("init", "register_my_menus");
 
 
 class ErasmusNav extends Walker_Nav_Menu {
@@ -64,6 +83,33 @@ class ErasmusNav extends Walker_Nav_Menu {
                 <div class='linkdesc'>%s</div>
             </div>
         </a>", $item->url, $item->title, $item->description);
+    }
+
+}
+
+class PartnersCountrySelector extends Walker_Nav_Menu {
+
+    // Tell Walker where to inherit it's parent and id values
+    var $db_fields = array(
+        'parent' => 'menu_item_parent',
+        'id'     => 'db_id'
+    );
+
+    /**
+     * At the start of each element, output a <li> and <a> tag structure.
+     * 
+     * Note: Menu objects include url and title properties, so we will use those.
+     */
+    function flag($country) {
+        echo get_stylesheet_directory_uri() . "/flags/" . $country . ".png";
+    }
+
+    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+        $output .= sprintf(
+        "<a href='%s'>
+            <div class='country-name'>" . ucwords(str_replace("_", " ", '%s')) . "
+            <img src='" . flag($partner) . "'>
+        </a>", $country->url, $country->name, $country->description);
     }
 
 }

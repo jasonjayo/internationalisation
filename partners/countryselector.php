@@ -21,7 +21,7 @@ $partners = [
         <main>
             <section class="standard-grid">
                 <?php foreach ($partners as $partner): ?>
-                    <a href='#'>
+                    <a href='<?php echo "partners/?country=" . $partner ?>'>
                         <div class='country-name'><?php echo ucwords(str_replace("_", " ", $partner)); ?></div>
                         <img src='<?php flag($partner); ?>'>
                     </a>
