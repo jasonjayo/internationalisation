@@ -1,9 +1,11 @@
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="erasmus">Erasmus+</a></li>
-    <li><a href="etwinning">eTwinning</a></li>
-    <li><a href="blog">Blog</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">History</a></li>
-    <li><a href="partners">Partners</a></li>
+<ul class="nav-items">
+    <li class="nav-mobile-back-btn">Back</li>
+    <li class="nav-item--primary"><a href="/">Home</a></li>
+    <li class="nav-item--primary"><a href="erasmus">Erasmus+</a></li>
+    <li class="nav-item--primary"><a href="etwinning">eTwinning</a></li>
+    <li class="nav-item--secondary"><a href="blog">Blog</a></li>
+    <li class="nav-item--secondary"><a href="#">Contact</a></li>
+    <li class="nav-item--primary"><a href="#">History</a></li>
+    <li class="nav-item--secondary"><a href="partners">Partners</a></li>
+    <li class="nav-more-btn">More</li>
 </ul>

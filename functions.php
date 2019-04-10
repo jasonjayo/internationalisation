@@ -1,5 +1,6 @@
 <?php
 function assets() {
+    wp_enqueue_script("appjs", get_stylesheet_directory_uri() . "/js/internationaisation.js");
 
     if (is_page("blog")) {
         wp_enqueue_style("bootstrap", get_stylesheet_directory_uri() . "/css/bootstrap.css");
@@ -16,7 +17,7 @@ function assets() {
         wp_enqueue_style("partners-country-selector", get_stylesheet_directory_uri() . "/css/partners-country-selector.css");
     }
     
-    if (is_page(["erasmus", "etwinning", "partners", "blog"])) {
+    if (is_page(["erasmus", "etwinning", "partners", "blog", "partnerslist"])) {
         wp_enqueue_style("standard-page", get_stylesheet_directory_uri() . "/css/standard-page.css");
     }
 
@@ -38,13 +39,13 @@ function baw_hack_wp_title_for_home($title) {
 }
 
 function custom_rewrite_tag() {
-    add_rewrite_tag('%country%', '([^&]+)');
+    add_rewrite_tag('%c%', '([^&]+)');
   }
   add_action("init", "custom_rewrite_tag", 10, 0);
 
 
 //   function custom_rewrite_rule() {
-//     add_rewrite_rule('^partnerscountry/([^/]*)/?','partnerslist/?country=$matches[1]','top');
+//     add_rewrite_rule('^partners/([^/]*)/?','partnerslist/?food=$1','top');
 //   }
 //   add_action('init', 'custom_rewrite_rule', 10, 0);
 

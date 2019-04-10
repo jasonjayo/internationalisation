@@ -76,7 +76,7 @@ $partnerInstitutions = [
     ],
 ];
 
-$selectedCountry = ucwords(str_replace("_", " ", get_query_var("country")));
+$selectedCountry = ucwords(str_replace("_", " ", get_query_var("c")));
 $partnerSchoolsFiltered = array_filter($partnerSchools, function($partner) use ($selectedCountry) {
     return ($partner["country"] === $selectedCountry);
 });

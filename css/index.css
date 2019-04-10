@@ -55,11 +55,15 @@ nav {
         color: var(--blue);
         text-decoration: underline; }
 
+.nav-more-btn,
+.nav-mobile-back-btn {
+  display: none; }
+
 #desc {
   text-align: center;
   font-size: 1.2rem;
-  border-top: 1px solid #E0E0E0;
-  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   padding: 5rem 25px;
   background: var(--greyGradient); }
 
