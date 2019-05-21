@@ -7,7 +7,7 @@
                 Internationalisation @ Carrick CS
             </h1>
             <div id="desc">
-            This site records all transnational collaboration undertaken<br> by Community School Carrick-on-Shannon, County Leitrim, Ireland.
+            This site records all transnational collaboration undertaken by Carrick-on-Shannon Community School, County Leitrim, Ireland.
             </div>
             <nav>
                 <?php get_template_part("nav-items"); ?>

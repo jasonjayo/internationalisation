@@ -2,8 +2,14 @@
 function assets() {
     wp_enqueue_script("appjs", get_stylesheet_directory_uri() . "/js/internationaisation.js");
 
-    if (is_page("blog")) {
+    if (is_page(["blog"])) {
         wp_enqueue_style("bootstrap", get_stylesheet_directory_uri() . "/css/bootstrap.css");
+    }
+
+    // Single post page
+    if (is_singular("post") || is_category() || is_archive()) {
+        wp_enqueue_style("bootstrap", get_stylesheet_directory_uri() . "/css/bootstrap.css");
+        wp_enqueue_style("standard-page", get_stylesheet_directory_uri() . "/css/standard-page.css");
         wp_enqueue_style("blog", get_stylesheet_directory_uri() . "/css/blog.css");
     }
 
@@ -17,10 +23,13 @@ function assets() {
         wp_enqueue_style("partners-country-selector", get_stylesheet_directory_uri() . "/css/partners-country-selector.css");
     }
     
-    if (is_page(["erasmus", "etwinning", "partners", "blog", "partnerslist"])) {
+    if (is_page(["erasmus", "etwinning", "partners", "blog", "partnerslist", "single.php"])) {
         wp_enqueue_style("standard-page", get_stylesheet_directory_uri() . "/css/standard-page.css");
     }
 
+    if (is_page(["blog"])) {
+        wp_enqueue_style("blog", get_stylesheet_directory_uri() . "/css/blog.css");
+    }
 }
 
 // Load scripts and styles
